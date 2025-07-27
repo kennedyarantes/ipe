@@ -213,16 +213,41 @@ Both engines allow a clear separation between **data** and **view**, making it e
 
   * `status: "active"`, `validity: "invalid"`.
 
+---
+
+## The `.ipe` File Format Purpose
+
+The **`.ipe`** file format was created to **standardize and optimize the transmission of entities** between systems.
+In many corporate and government scenarios, digital documents are transmitted repeatedly, often carrying redundant structural data, unnecessary fields, and information repeated on every transfer.
+The `.ipe` format addresses this problem by adopting a **minimalistic and efficient approach**, transferring **only the essential content**.
+
+### Standardized Structure
+
+* Uses a contract file (`pass.<type>.<name>.pass`) to define fields, their order, and data types.
+* Eliminates ambiguity in data consumption and improves interoperability.
+
+### Transmission Optimization
+
+* Reduces payload size by removing redundant labels.
+* Ensures every data array position corresponds to a predefined field.
+* Supports native compression (Gzip) for additional size reduction.
+
+### Perfect for RESTful APIs
+
+* Simple JSON arrays, ideal for quick parsing and integration.
+* Uses explicit versioning to maintain compatibility across clients and servers.
+
+### Validation and Flexibility
+
+* Separates **schema validation** (structure and data types) from **business validation** (rules such as date ranges).
+* Even if business validation fails, documents are accepted but flagged as `validity: "invalid"`.
+
+### QR Code Integration
+
+* Minimal required information can be embedded into QR Codes.
+* Allows offline validation and quick document retrieval using a simple scan.
+
+
+---
+
 This ensures **all documents are transferable**, even when there are downstream business issues.
-
----
-
-
-## Future Note
-
-A future binary version `.ipeb` (binary representation) may be introduced for high-performance scenarios, maintaining the same structure.
-
----
-
-
-"Built with no love, just beer. – IPE Team"
