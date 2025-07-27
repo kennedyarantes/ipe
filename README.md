@@ -251,3 +251,7 @@ The `.ipe` format addresses this problem by adopting a **minimalistic and effici
 ---
 
 This ensures **all documents are transferable**, even when there are downstream business issues.
+
+---
+
+"Built with no love, just beer. – IPE Team"
