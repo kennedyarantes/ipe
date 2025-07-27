@@ -1,4 +1,4 @@
-# IPE File Format Specification (v2)
+# IPE File Format Specification
 
 ## Overview
 
@@ -223,3 +223,6 @@ This ensures **all documents are transferable**, even when there are downstream 
 A future binary version `.ipeb` (binary representation) may be introduced for high-performance scenarios, maintaining the same structure.
 
 ---
+
+
+"Built with no love, just beer. – IPE Team"
